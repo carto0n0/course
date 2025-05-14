@@ -1,0 +1,116 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 40% 85%;
+    --foreground: 20 40% 20%;
+
+    --card: 35 40% 90%;
+    --card-foreground: 20 40% 20%;
+
+    --popover: 35 40% 90%;
+    --popover-foreground: 20 40% 20%;
+
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 40% 65%;
+    --secondary-foreground: 20 40% 20%;
+
+    --muted: 35 40% 75%;
+    --muted-foreground: 20 40% 40%;
+
+    --accent: 33 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 40% 65%;
+    --input: 35 40% 65%;
+    --ring: 33 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 35 40% 85%;
+    --sidebar-foreground: 20 40% 20%;
+    --sidebar-primary: 33 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 40% 90%;
+    --sidebar-accent-foreground: 20 40% 20%;
+    --sidebar-border: 35 40% 65%;
+    --sidebar-ring: 33 100% 50%;
+  }
+
+  .dark {
+    --background: 20 30% 15%;
+    --foreground: 35 40% 90%;
+
+    --card: 20 30% 20%;
+    --card-foreground: 35 40% 90%;
+
+    --popover: 20 30% 20%;
+    --popover-foreground: 35 40% 90%;
+
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 30% 30%;
+    --secondary-foreground: 35 40% 90%;
+
+    --muted: 20 30% 25%;
+    --muted-foreground: 35 40% 70%;
+
+    --accent: 33 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 30% 30%;
+    --input: 20 30% 30%;
+    --ring: 33 100% 50%;
+
+    --sidebar-background: 20 30% 15%;
+    --sidebar-foreground: 35 40% 90%;
+    --sidebar-primary: 33 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 30% 25%;
+    --sidebar-accent-foreground: 35 40% 90%;
+    --sidebar-border: 20 30% 30%;
+    --sidebar-ring: 33 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply w-full max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  .btn-primary {
+    @apply bg-soulmade-orange text-white px-6 py-3 rounded transition-all duration-300 hover:shadow-md hover:scale-105;
+  }
+  
+  .nav-link {
+    @apply relative text-foreground hover:text-soulmade-orange transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-soulmade-orange after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground;
+  }
+}
